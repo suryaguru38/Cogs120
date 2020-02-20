@@ -1,0 +1,16 @@
+{
+    "FAQ" : [
+        {
+            "question": "How to chat with 2k support",
+            "answer": "1. Log into your account, submit a ticket for 2k20. \n 2. You can do this by either submitting a ticket from the 'Submit a Request' button at the top of the page, or from the bottom on those specific games' pages. \n 3. On the ticket submission page, you should see a button with the chat icon in the lower right corner. Click on that. \n 4. Clicking on the chat icon will bring up the form below. Fill that out, click 'submit'. \n 5. A new chat window will come up. Go ahead and tell the support team what you need help with." 
+        },
+        {
+            "question": "What should I include in my support ticket?",
+            "answer": "Here's the information that is required from you when you file a ticket (you'll have to fill in or select this info from drop-down menus in their associated fields): \n Your name \n Subject (a quick summary of what's going on) \n Description (a full explanation of what's going on) \n Game you're experiencing an issue with \n Platform (this is either the device or operating system you're on; examples include Xbox One, iOS, and PC) Platform name (your user ID on whatever platform you're filing a ticket for; an example would be your Xbox Live Gamertag) \n An optional (but incredibly helpful) piece of information to include is the Issue Type, which helps us categorize your support ticket faster and get it in front of the team member best equipped to handle your issue. "
+        },
+        {
+            "question": "How is this app best used?",
+            "answer": "The app can be used while you are playing the game and need to reference some moves. It can also be used as a study guide while you are not playing"
+        }
+    ]
+}

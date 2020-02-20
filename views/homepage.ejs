@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Learn 2K</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type ="text/css" href="/css/styles.css">
+</head>
+
+<body class="showcase">
+
+  <!-- Page Content -->
+  
+  <div class="container">
+    <div class="row main-heading">
+      <div class="col-lg-12 text-center">
+        <h1 class="main-heading-text" id='LearnFont'>Learn2K</h1>
+        <h1 class="lead mb-3" style="color:honeydew; font-size: 300%">Welcome <%= name %></h1>
+        <a href="/users/logout" class="btn btn-secondary";>Logout</a>
+      </div>
+    </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="search-container">
+                <!-- Actual search box -->
+                  <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="search" id="search-text" class="form-control mdbAutocomplete" placeholder="Search">
+                  </div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-lg-12 text-center">
+              <h1 class="tutorial-title" style="color:honeydew; font-size: 500%">Tutorials</h1>
+          </div>
+      </div>
+      
+      <div class="row mt-1">
+          <div class="col-6">
+            <a href ="basicdefence.html">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Basic Defence</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+              <a href="basicoffense.html">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Basic Offence</h5>
+                  </div>
+                </div>
+              </a>
+          </div>
+        </div>
+      
+      <div class="row mt-1">
+          <div class="col-6">
+            <a href = "adv.defence.html">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Adv. Defence</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <a href ="adv.offence.html">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Adv. Offence</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br><br>
+    <footer id="sticky-footer" class="py-4 footer">
+            <div class="container text-center">
+              <div class="row">
+                  <div class="col-3">
+                    <a href="homepage" class="active-item"><i class="fa fa-user"></i></a>
+                    <span class="active-item-text">Home</span>
+                  </div>
+                  <div class="col-3">
+                      <a href="#" class="item"><i class="fa fa-globe"></i></a>
+                      <span class="item-text">Learn</span>
+                  </div>
+                  <div class="col-3">
+                      <a href="faqPage.html" class="item"><i class="fa fa-question-circle"></i></a>
+                      <span class="item-text">FAQ</span>
+                  </div>
+                  <div class="col-3">
+                      <a href="placeholder.html" class="item"><i class="fa fa-users"></i></a>
+                      <span class="item-text">Community</span>
+                  </div>
+              </div>
+            </div>
+      </footer>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/typehead.js"></script>
+
+  <script type="text/javascript">
+
+// Load Completed Button
+
+function LoadCompletedButton(itemVal) {
+  var storedItems = localStorage.getItem("CompletedSet");
+  if (storedItems != null) {
+    var json_arr = $.parseJSON(storedItems);
+    for (var i = 0; i < json_arr.length; i++) {
+      if (itemVal == json_arr[i].name && json_arr[i].status == "Completed") {
+        $(".completeBtn").html(
+          '<button type="button" class="btn btn-success btn-completed">Completed</button>'
+        );
+      }
+    }
+  }
+}
+
+      //autocomplete(document.getElementById("search-text"), suggetions);
+
+    var jsonData = [
+      {
+        "id": 1,
+        "name": "Move Player",
+        "link": "#"
+      },
+      {
+        "id": 2,
+        "name": "Hands Up / Contest",
+        "link": "#"
+      },
+      {
+        "id": 3,
+        "name": "Intense D",
+        "link": "#"
+      },
+      {
+        "id": 4,
+        "name": "Sprint",
+        "link": "#"
+      },
+      {
+        "id": 5,
+        "name": "Defensive Strategies",
+        "link": "#"
+      },
+      {
+        "id": 6,
+        "name": "Icon Swap",
+        "link": "#"
+      },
+      {
+        "id": 7,
+        "name": "Player Swap",
+        "link": "#"
+      },
+      {
+        "id": 8,
+        "name": "Take Charge",
+        "link": "#"
+      },
+      {
+        "id": 9,
+        "name": "Steal",
+        "link": "#"
+      },
+      {
+        "id": 10,
+        "name": "Block / Rebound",
+        "link": "#"
+      },
+      {
+        "id": 11,
+        "name": "Gameplay HUD",
+        "link": "#"
+      },
+      {
+        "id": 12,
+        "name": "Points of Emphasis",
+        "link": "#"
+      },
+      {
+        "id": 13,
+        "name": "Defensive Sets",
+        "link": "#"
+      },
+      {
+        "id": 14,
+        "name": "Substitutions",
+        "link": "#"
+      },
+      {
+        "id": 15,
+        "name": "Intentional Foul",
+        "link": "#"
+      },
+      {
+        "id": 16,
+        "name": "Crowd Dribbler",
+        "link": "CrowdDribbler.html"
+      },
+      {
+        "id": 17,
+        "name": "Fast Shuffle",
+        "link": "#"
+      },
+      {
+        "id": 18,
+        "name": "Swat Block",
+        "link": "#"
+      },
+      {
+        "id": 19,
+        "name": "Flop",
+        "link": "#"
+      },
+      {
+        "id": 20,
+        "name": "Double Team",
+        "link": "#"
+      },
+      {
+        "id": 21,
+        "name": "Icon Double Team",
+        "link": "#"
+      },
+      {
+        "id": 22,
+        "name": "Bump",
+        "link": "#"
+      },
+      {
+        "id": 23,
+        "name": "Chuck",
+        "link": "#"
+      },
+      {
+        "id": 23,
+        "name": "Grab (while defender is running)",
+        "link": "#"
+      },
+      {
+        "id": 24,
+        "name": "Post Up / Ball Denial",
+        "link": "#"
+      },
+      {
+        "id": 25,
+        "name": "Deny Hands Out",
+        "link": "#"
+      },
+      {
+        "id": 26,
+        "name": "Ball Pressure",
+        "link": "#"
+      },
+      {
+        "id": 27,
+        "name": "Push",
+        "link": "#"
+      },
+      {
+        "id": 28,
+        "name": "Deny / Front Post",
+        "link": "#"
+      },
+      {
+        "id": 29,
+        "name": "Pull Chair in Post",
+        "link": "#"
+      },
+      {
+        "id": 30,
+        "name": "Quick Playcall",
+        "link": "#"
+      },
+      {
+        "id": 31,
+        "name": "Positional Playcall",
+        "link": "#"
+      },
+      {
+        "id": 32,
+        "name": "Basic Pick Control",
+        "link": "#"
+      },
+      {
+        "id": 33,
+        "name": "Advanced Pick Control",
+        "link": "#"
+      },
+      {
+        "id": 34,
+        "name": "Icon Pick Control",
+        "link": "#"
+      },
+      {
+        "id": 35,
+        "name": "Slip Screen and Early Fade",
+        "link": "#"
+      },
+      {
+        "id": 36,
+        "name": "Call for Ball",
+        "link": "#"
+      },
+      {
+        "id": 37,
+        "name": "Call for Alley-Oop",
+        "link": "#"
+      },
+      {
+        "id": 38,
+        "name": "Set Screen",
+        "link": "#"
+      },
+      {
+        "id": 39,
+        "name": "Spin",
+        "link": "#"
+      },
+      {
+        "id": 40,
+        "name": "Walkdown",
+        "link": "#"
+      },
+      {
+        "id": 41,
+        "name": "Post Fade",
+        "link": "#"
+      },
+      {
+        "id": 42,
+        "name": "Post Hook",
+        "link": "#"
+      },
+      {
+        "id": 43,
+        "name": "Post Layup",
+        "link": "#"
+      },
+      {
+        "id": 44,
+        "name": "Post Hop",
+        "link": "#"
+      },
+      {
+        "id": 45,
+        "name": "Post Stepback",
+        "link": "#"
+      },
+      {
+        "id": 46,
+        "name": "Dropstep",
+        "link": "#"
+      },
+      {
+        "id": 47,
+        "name": "Up and Under",
+        "link": "#"
+      },
+      {
+        "id": 48,
+        "name": "Shimmy Shot",
+        "link": "#"
+      },
+      {
+        "id": 48,
+        "name": "Shimmy Hook",
+        "link": "#"
+      },
+      {
+        "id": 49,
+        "name": "Move Player",
+        "link": "#"
+      },
+      {
+        "id": 50,
+        "name": "Post Up",
+        "link": "#"
+      },
+      {
+        "id": 51,
+        "name": "Sprint",
+        "link": "#"
+      },
+      {
+        "id": 52,
+        "name": "Pass",
+        "link": "#"
+      },
+      {
+        "id": 53,
+        "name": "Bounce Pass",
+        "link": "bouncepass.html"
+      },
+      {
+        "id": 54,
+        "name": "Shoot",
+        "link": "#"
+      },
+      {
+        "id": 55,
+        "name": "Overhead Skip Pass",
+        "link": "#"
+      },
+      {
+        "id": 56,
+        "name": "Timeout",
+        "link": "#"
+      },
+      {
+        "id": 57,
+        "name": "Pause",
+        "link": "#"
+      },
+      {
+        "id": 58,
+        "name": "Normal Layup",
+        "link": "#"
+      },
+      {
+        "id": 59,
+        "name": "2-Hand Dunk",
+        "link": "#"
+      },
+      {
+        "id": 60,
+        "name": "Flashy Dunk",
+        "link": "#"
+      },
+      {
+        "id": 61,
+        "name": "Pump Fake",
+        "link": "#"
+      }
+  ]
+
+$('#search-text').typeahead(
+  {
+    source:jsonData,
+    updater: function(selection){
+        window.location.href = selection.link;
+    }
+  }
+);
+
+  </script>
+
+</body>
+
+</html>

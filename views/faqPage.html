@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Learn 2K</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d7bea5425e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+  <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<!-- page content -->
+<body class = "showcase">
+<header>
+<div class="container">
+    <div class="row main-headin">
+      <div class="col-lg-12 text-center">
+        <h1 class="main-heading-text" id = 'LearnFont'>Learn2K</h1>
+      </div>
+    </div>
+    
+    <div class="page-wrap">
+        <h1 style="color:honeydew; font-size:400%; text-align: center;">Frequently Asked Questions</h1>
+        <div id ="FAQID"></div>
+    </div>
+
+<script id="qna" type="text/x-handlebars-template">
+    {{#each FAQ}}
+         <h6>
+             <a href='#' class="list-group-item list-group-item-action mb-1" id="questions">{{question}}</a>
+             <a href='#' class="list-group-item list-group-item-action mb-1">{{answer}}</a>
+        </h6>
+     {{/each}}
+</script>
+
+<footer id="sticky-footer" class="py-4 footer">
+            <div class="container text-centers">
+              <div class="row">
+                  <div class="col-3">
+                    <a href="homepage" class="item" style=color:whitesmoke><i class="fa fa-user"></i></a>
+                    <span class="item-text" style=color:whitesmoke>Home</span>
+                  </div>
+                  <div class="col-3">
+                      <a href="#" class="item"><i class="fa fa-globe"></i></a>
+                      <span class="item-text">Learn</span>
+                  </div>
+                  <div class="col-3">
+                      <a href="faqPage.html" class="active-item"><i class="fa fa-question-circle"></i></a>
+                      <span class="active-item-text">FAQ</span>
+                  </div>
+                  <div class="col-3">
+                      <a href="placeholder.html" class="item"><i class="fa fa-users"></i></a>
+                      <span class="item-text">Community</span>
+                  </div>
+              </div>
+            </div>
+      </footer>
+  </div>
+
+  <script src="/js/faqload.js"></script>
+  <script src="/js/handlebars-v4.7.3.js"></script>
+  <script src="/js/jquery.slim.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
