@@ -23,10 +23,6 @@ app.use(express.urlencoded());
 // The below works but isn't a good practice because it's not scalable
 app.use("/app.js", express.static(path.join(__dirname, "/app.js")));
 
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/index.html");
-});
-
 /*Environments 
 
 app.engine('handlebars', handlebars());
